@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekt 2 JavaScript Future Collars (Robert Puszkin)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="media/logo.png" alt="logo" class="logo" /><h1>Przelicznik walut</h1>  
+    </header>
+    <div class="converter-container">
+      <div id="loader" class="hidden">Ładowanie...</div>
+      <div class="conventer">
+        <input type="number" id="amount" placeholder="Kwota" />
+        <select id="currency">
+          <option value="eur">EUR</option>
+          <option value="usd">USD</option>
+          <option value="chf">CHF</option>
+        </select>
+        
+        <button id="convertBtn">Przelicz</button>
+      <span id="result"></span>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
