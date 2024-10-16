@@ -34,7 +34,7 @@ convertBtn.addEventListener("click", () => {
     })
     .catch((error) => {
       loader.classList.add("hidden");
-      resultDiv.innerHTML = "Błąd: " + error.message;
+      resultDiv.innerHTML = "Wystąpił błąd: " + error.message;
       resultDiv.style.color = "red";
     });
 });
