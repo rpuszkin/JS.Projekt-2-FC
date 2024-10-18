@@ -13,17 +13,23 @@
     </header>
     <main class="converter-container">
       <div id="loader" class="loader hidden">Ładowanie...</div>
-      <div class="conventer">
-        <input type="number" id="amount" class="amount" placeholder="Kwota" />
+      <form id="form" class="conventer">
+        <input
+          type="number"
+          id="amount"
+          class="amount"
+          placeholder="Kwota"
+          step="0.01"
+        />
         <select id="currency" class="currency">
           <option value="eur">EUR</option>
           <option value="usd">USD</option>
           <option value="chf">CHF</option>
         </select>
 
-        <button id="convertBtn" class="button">Przelicz</button>
+        <button type="submit" id="convertBtn" class="button">Przelicz</button>
         <span id="result" class="result"></span>
-      </div>
+      </form>
     </main>
     <script src="index.js"></script>
   </body>

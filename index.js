@@ -1,12 +1,11 @@
 const currencySelect = document.getElementById("currency");
 const amountInput = document.getElementById("amount");
-const convertBtn = document.getElementById("convertBtn");
 const resultDiv = document.getElementById("result");
 const loader = document.getElementById("loader");
-
+const form = document.getElementById("form");
 const apiURL = "https://api.nbp.pl/api/exchangerates/rates/a/";
-
-convertBtn.addEventListener("click", () => {
+form.addEventListener("submit", () => {
+  event.preventDefault();
   const currency = currencySelect.value;
   const amount = parseFloat(amountInput.value);
 
