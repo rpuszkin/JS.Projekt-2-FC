@@ -36,11 +36,13 @@ form.addEventListener("submit", () => {
         loader.classList.add("hidden");
         resultDiv.innerHTML = `to ${result} PLN.`;
         resultDiv.style.color = "black";
+      } else {
+        resultDiv.textContent("wystąpił błąd, spróbu później");
       }
     })
     .catch((error) => {
       loader.classList.add("hidden");
-      resultDiv.innerHTML = "Wystąpił błąd: " + error.message;
+      resultDiv.textContent = "Wystąpił błąd: " + error.message;
       resultDiv.style.color = "red";
     });
 });
