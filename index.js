@@ -25,11 +25,18 @@ form.addEventListener("submit", () => {
       return response.json();
     })
     .then((data) => {
-      const rate = data.rates[0].mid;
-      const result = (amount * rate).toFixed(2);
-      loader.classList.add("hidden");
-      resultDiv.innerHTML = `to ${result} PLN.`;
-      resultDiv.style.color = "black";
+      if (
+        data &&
+        Array.isArray(data.rates) &&
+        data.rates.length > 0 &&
+        data.rates[0].mid
+      ) {
+        const rate = data.rates[0].mid;
+        const result = (amount * rate).toFixed(2);
+        loader.classList.add("hidden");
+        resultDiv.innerHTML = `to ${result} PLN.`;
+        resultDiv.style.color = "black";
+      }
     })
     .catch((error) => {
       loader.classList.add("hidden");
