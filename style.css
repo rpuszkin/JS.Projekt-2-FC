@@ -12,12 +12,12 @@ body {
 }
 .logo {
   aspect-ratio: 1;
-  height: 128px;
+  height: 96px;
   position: absolute;
   left: 0;
 }
 
-h1 {
+.title {
   padding: 10px 30px;
   width: 300px;
   margin: 25px auto;
